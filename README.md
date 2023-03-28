@@ -23,4 +23,18 @@
 2. Si queremos comprobar el estados de los archivos de nuestro proyecto: `git status`
 3. `git add .`
 4. `git commit -m "mensaje del commit"`
-5. `git push origin main`
+5. `git push origin main` o `git push origin nombre_de_la_rama_actual`
+
+## Trabajar con estrategias de branching
+Existen dos estrategias de branching:
+1. Trunk-based: Cuando trabajamos de manera individual
+2. Git Flow: Para trabajo colaborativo
+
+## Trabajar con Git Flow
+1. Se ejecutan los pasos anteriores (Inicialización del repositorio).
+2. Va a crear la rama develop: `git checkout -b develop`
+3. Agregar unos cambios mínimos
+4. Desde la rama develop se ejecutan los pasos de Subir cambios a un repositorio.
+
+*Nota:*
+- `git reset`: para deshacer `git add`
