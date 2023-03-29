@@ -13,9 +13,9 @@
 - Ingresar a nuestra cuenta GitHub
 - Creamos un nuevo repositorio
 - Nos regresamos a la terminal del proyecto en VSC para ejecutar las tres últimas líneas que nos proporciona GitHub:
-    - git remote add origin git@github.com:WhitneySt/test-git.git : Para apuntar al remoto
-    - git branch -M main: Para renombrar la rama principal de Master a main
-    - git push -u origin main: Se suben todos los archivos al repositorio remoto.
+    - `git remote add origin git@github.com:WhitneySt/test-git.git` : Para apuntar al remoto
+    - `git branch -M main`: Para renombrar la rama principal de Master a main
+    - `git push -u origin main`: Se suben todos los archivos al repositorio remoto.
 
 ## Subir cambios a un repositorio
 
