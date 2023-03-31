@@ -63,10 +63,11 @@ Existen dos estrategias de branching:
     - Integrar los cambios existentes en la rama `develop` con `git merge develop`
     - Si existen conflictos, estos deben ser resuelto y una vez corregidos en el editor de VSC; se deben ejecutar los pasos de **Subir cambios a un repositorio**
     - Moverse a la rama `develop` con `git checkout develop`
+    - Ejecutar `git pull origin develop`
     - Integrar los cambios existentes en la rama `feature-nombre` con `git merge feature-nombre`
     - Si existen conflictos, estos deben ser resuelto y una vez corregidos en el editor de VSC; se deben ejecutar los pasos de **Subir cambios a un repositorio**
  23. Una vez completadas las funcionalidades Fusionar los cambios existentes en la rama `develop` en la rama `main`
 
 *Nota:*
 - `git reset`: para deshacer `git add`
-- `git push origin --delete experimento`: Para eliminar una rama (o branch existente en el repositorio remoto)
+- `git push origin --delete nombre_de_la_rama`: Para eliminar una rama (o branch existente en el repositorio remoto)
