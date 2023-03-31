@@ -31,9 +31,9 @@ Existen dos estrategias de branching:
 2. Git Flow: Para trabajo colaborativo
 
 ## Trabajar con Git Flow
-1. Se ejecutan los pasos anteriores (Inicialización del repositorio).
+1. Se ejecutan los pasos anteriores de **Inicialización del repositorio**.
 2. Va a crear la rama develop: `git checkout -b develop`
-3. Agregar unos cambios mínimos
+3. Agregar unos cambios mínimos en cualquiera de los archivos existentes en la estructura de carpetas del proyecto
 4. Desde la rama develop se ejecutan los pasos de Subir cambios a un repositorio.
 5. Ir al repositorio remoto en GitHub, dándo click sobre el botón compare & pull Request
 6. Generamos el pull Request
@@ -42,6 +42,31 @@ Existen dos estrategias de branching:
 9. En la terminal de VSC nos movemos a la rama main `git checkout main`
 10. Ejecutamos `git pull` para actualizar nuestro repositorio local.
 11. Configurar los colaboradores en el repositorio remoto.
+12. Los colaboradores deben aceptar la invitación a trabajar el repositorio (esto puede ser mediante el correo o la notificación enviada directamente a la cuenta de GitHub).
+13. Después de aceptar la invitación, cada colaborador o colaboradora debe **clonar el repositorio**:
+    - Copiar el enlace https o ssh entregado al dar click sobre el botón code que aparece en el repositorio en GitHub
+    - Ubicarse en la carpeta donde deseamos ubicar la carpeta del proyecto a clonar
+    - Con click derecho, abrir una consola `git bash here`
+    - En la consola correr el comando `git clone enlace_https_o_ssh_copiado`. **ojo que no se peguen caracteres indeseados que puedan ocasionar errores**
+14. Moverse a la carpeta clonada corriendo el comando `cd nombre_carpeta_clonada`
+15. Abrir el proyecto en VSC corriendo el comando `code .`
+16. En VSC abrir una nueva terminal
+17. En la rama main, ejecutar el comando `git pull` para actualizar
+18. Moverse a la rama `develop` con el comando `git checkout develop`
+19. Crear la rama de `feature` propia desde `develop` corriendo el comando `git checkout -b feature-nombreDeLaCaracteristica`
+20. Empezar a trabajar en la funcionalidad del código en el editor.
+21. Una vez finalizada la funcionalidad ejecutar los pasos de **Subir cambios a un repositorio**
+22. Fusionar los cambios subidos desde la rama `feature` a la rama `develop`:
+    - Moverse a la rama `develop` con el comando `git checkout develop`
+    - Actualizar la rama `develop` con el contenido que puede existe en el repositorio remoto con `git pull origin develop` **Ojo 👀 cuida'o que esto es importante**
+    - Moverse a la rama `feature` con `git checkout feature-nombre`
+    - Integrar los cambios existentes en la rama `develop` con `git merge develop`
+    - Si existen conflictos, estos deben ser resuelto y una vez corregidos en el editor de VSC; se deben ejecutar los pasos de **Subir cambios a un repositorio**
+    - Moverse a la rama `develop` con `git checkout develop`
+    - Integrar los cambios existentes en la rama `feature-nombre` con `git merge feature-nombre`
+    - Si existen conflictos, estos deben ser resuelto y una vez corregidos en el editor de VSC; se deben ejecutar los pasos de **Subir cambios a un repositorio**
+ 23. Una vez completadas las funcionalidades Fusionar los cambios existentes en la rama `develop` en la rama `main`
 
 *Nota:*
 - `git reset`: para deshacer `git add`
+- `git push origin --delete experimento`: Para eliminar una rama (o branch existente en el repositorio remoto)
